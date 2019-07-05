@@ -1,0 +1,338 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* COLORS FOR HEADERS AND COPY */
+/* COLORS FOR STRUCTURE */
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ProximaNova-RegularWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-RegularWeb.woff2") format("woff2"), url("../fonts/ProximaNova-RegularWeb.woff") format("woff"), url("../fonts/ProximaNova-RegularWeb.ttf") format("truetype"), url("../fonts/ProximaNova-RegularWeb.svg#ProximaNova-Regular") format("svg"); }
+@font-face {
+  font-family: "ProximaNova-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ProximaNova-MediumWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-MediumWeb.woff2") format("woff2"), url("../fonts/ProximaNova-MediumWeb.woff") format("woff"), url("../fonts/ProximaNova-MediumWeb.ttf") format("truetype"), url("../fonts/ProximaNova-MediumWeb.svg#ProximaNova-Medium") format("svg"); }
+@font-face {
+  font-family: "ProximaNova-SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ProximaNova-SemiboldWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-SemiboldWeb.woff2") format("woff2"), url("../fonts/ProximaNova-SemiboldWeb.woff") format("woff"), url("../fonts/ProximaNova-SemiboldWeb.ttf") format("truetype"), url("../fonts/ProximaNova-SemiboldWeb.svg#ProximaNova-SemiBold") format("svg"); }
+@font-face {
+  font-family: "ProximaNova-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ProximaNova-BoldWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-BoldWeb.woff2") format("woff2"), url("../fonts/ProximaNova-BoldWeb.woff") format("woff"), url("../fonts/ProximaNova-BoldWeb.ttf") format("truetype"), url("../fonts/ProximaNova-BoldWeb.svg#ProximaNova-Bold") format("svg"); }
+/* MEMBERS LIST STRUCTURE AND STYLING; */
+.membersList {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); }
+  .membersList .header-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 10000; }
+  .membersList .close-button-container {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    width: 20px;
+    height: 20px; }
+    .membersList .close-button-container .close-button {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: url("../assets/close-button.png") 0% 0% no-repeat;
+      background-size: cover; }
+  .membersList .membersList-header {
+    position: fixed;
+    left: 0;
+    top: 32px;
+    width: 100%;
+    text-align: center;
+    /*margin-bottom: 32px;
+    padding-top: 40px;*/ }
+    .membersList .membersList-header h1 {
+      color: #4E4E54;
+      font-family: ProximaNova-Bold;
+      font-size: 32px;
+      line-height: 44px; }
+    .membersList .membersList-header h2 {
+      color: #959599;
+      font-family: ProximaNova-Medium;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center; }
+  .membersList .members-container {
+    margin-top: 130px; }
+  .membersList .member-card-container {
+    min-width: 452px;
+    margin-bottom: 32px; }
+    .membersList .member-card-container .clickthrough {
+      text-decoration: none; }
+  .membersList .member-card {
+    margin: 0 12px;
+    box-shadow: 1px 1px 2px 0px rgba(220, 220, 220, 0.5);
+    -webkit-transition: box-shadow 0.15s ease-in-out;
+    -moz-transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out;
+    background: white; }
+    .membersList .member-card:hover {
+      box-shadow: 4px 4px 10px 0px rgba(220, 220, 220, 0.5); }
+      .membersList .member-card:hover .member-card-portrait .portrait-highlight {
+        border: 3px solid #0DBE72; }
+    .membersList .member-card .member-card-top {
+      min-height: 142px;
+      padding: 16px 12px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom: 1px solid #F1F1F1; }
+    .membersList .member-card .member-card-portrait {
+      width: 88px;
+      height: 112px;
+      float: left; }
+      .membersList .member-card .member-card-portrait .portrait-highlight {
+        position: relative;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        border: 3px solid white;
+        -webkit-transition: border 0.15s ease-in-out;
+        -moz-transition: border 0.15s ease-in-out;
+        transition: border 0.15s ease-in-out;
+        /* TO BE ADDED TO 'portrait' CLASS WHEN MEMBER DOES NOT HAVE PROFILE PORTRAIT */ }
+        .membersList .member-card .member-card-portrait .portrait-highlight .portrait {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          z-index: 1000; }
+        .membersList .member-card .member-card-portrait .portrait-highlight .member-initials {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 72px;
+          height: 72px;
+          z-index: 0;
+          border-radius: 50%;
+          font-size: 24px;
+          line-height: 72px;
+          text-align: center;
+          color: #F2F2F2;
+          font-family: ProximaNova-SemiBold;
+          letter-spacing: 0.87px;
+          background: #0DBE72; }
+        .membersList .member-card .member-card-portrait .portrait-highlight .null-portrait {
+          display: none; }
+    .membersList .member-card .member-details-container {
+      position: relative;
+      height: 112px;
+      margin-left: 112px; }
+      .membersList .member-card .member-details-container .member-details {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+      .membersList .member-card .member-details-container .name {
+        margin-bottom: 2px;
+        color: #0DBE72;
+        font-family: ProximaNova-Bold;
+        font-size: 16px;
+        letter-spacing: 0.54px;
+        line-height: 19px; }
+      .membersList .member-card .member-details-container .email {
+        margin-bottom: 6px;
+        color: #55555C;
+        font-family: ProximaNova-Medium;
+        font-size: 14px; }
+      .membersList .member-card .member-details-container .bio {
+        max-height: 64px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        color: #959599;
+        font-family: ProximaNova-Regular;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.24px; }
+      .membersList .member-card .member-details-container .social {
+        /* TO BE ADDED TO 'social-icon' CLASS WHEN MEMBER HAS A NULL SOCIAL LINK */ }
+        .membersList .member-card .member-details-container .social .social-icon {
+          margin-right: 16px;
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: none; }
+          .membersList .member-card .member-details-container .social .social-icon .linkedin {
+            width: 20px;
+            height: 20px;
+            background: url("../assets/social_sprite.png") no-repeat;
+            background-position: -20px 0px;
+            -webkit-transform: translateY(-1px);
+            -moz-transform: translateY(-1px);
+            -ms-transform: translateY(-1px);
+            -o-transform: translateY(-1px);
+            transform: translateY(-1px); }
+            .membersList .member-card .member-details-container .social .social-icon .linkedin:hover {
+              background: url("../assets/social_sprite.png") no-repeat;
+              background-position: -20px -20px; }
+          .membersList .member-card .member-details-container .social .social-icon .website {
+            width: 20px;
+            height: 20px;
+            background: url("../assets/social_sprite.png") no-repeat;
+            background-position: -40px 0px; }
+            .membersList .member-card .member-details-container .social .social-icon .website:hover {
+              background: url("../assets/social_sprite.png") no-repeat;
+              background-position: -40px -20px; }
+          .membersList .member-card .member-details-container .social .social-icon .facebook {
+            width: 20px;
+            height: 20px;
+            background: url("../assets/social_sprite.png") no-repeat;
+            background-position: 0px 0px; }
+            .membersList .member-card .member-details-container .social .social-icon .facebook:hover {
+              background: url("../assets/social_sprite.png") no-repeat;
+              background-position: 0px -20px; }
+          .membersList .member-card .member-details-container .social .social-icon .twitter {
+            width: 20px;
+            height: 20px;
+            background: url("../assets/social_sprite.png") no-repeat;
+            background-position: -60px 0px; }
+            .membersList .member-card .member-details-container .social .social-icon .twitter .twitter-handle {
+              margin-left: 24px;
+              color: white;
+              font-family: ProximaNova-Medium;
+              font-size: 11px;
+              letter-spacing: 0.44px;
+              line-height: 20px;
+              -webkit-transition: color 0.22s ease-in-out;
+              -moz-transition: color 0.22s ease-in-out;
+              transition: color 0.22s ease-in-out; }
+            .membersList .member-card .member-details-container .social .social-icon .twitter:hover {
+              width: 122px;
+              background: url("../assets/social_sprite.png") no-repeat;
+              background-position: -60px -20px; }
+              .membersList .member-card .member-details-container .social .social-icon .twitter:hover .twitter-handle {
+                color: #8C8C93; }
+        .membersList .member-card .member-details-container .social .null-social {
+          display: none; }
+    .membersList .member-card .member-card-bottom {
+      min-height: 50px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    .membersList .member-card .stats-container {
+      position: relative;
+      display: inline-block;
+      width: 33%;
+      margin-right: -2px;
+      text-align: center; }
+      .membersList .member-card .stats-container .stats {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%; }
+        .membersList .member-card .stats-container .stats .val {
+          color: #959599;
+          font-family: ProximaNova-SemiBold;
+          font-size: 11px;
+          line-height: 14px;
+          letter-spacing: 0.24px; }
+        .membersList .member-card .stats-container .stats .key {
+          color: #959599;
+          font-family: ProximaNova-Medium;
+          font-size: 10px;
+          line-height: 13px;
+          text-transform: uppercase;
+          letter-spacing: 0.88px; }
+
+/* MEDIA QUERIES */
+/*@media screen and (max-width: $members-list-breakpoint) {
+    .member-card-container {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+    }
+}*/
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  font-family: ProximaNova-Regular; }
+  .main .container {
+    max-width: 1350px;
+    height: 100%; }
+  .main .row {
+    height: 100%; }
+  .main .left-column {
+    height: 100%;
+    background: #F2F2F2; }
+  .main .right-column {
+    height: 100%; }
+
+/*# sourceMappingURL=base.css.map */
